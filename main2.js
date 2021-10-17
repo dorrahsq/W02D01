@@ -63,3 +63,25 @@ const maximumNumber = function (numbers) {
 const reversString = function (string) {
   return string.split("").reverse().join("");
 };
+
+//Extra1
+const allUsers = [
+  { username: "Jane", password: "123456" },
+  { username: "admin", password: "abc123" },
+];
+const createUser = function (usernamei, passwordi) {
+  if (allUsers.some((allUsers) => allUsers.username === usernamei)) {
+    return "That username is not available";
+  }
+  allUsers.push({ username: usernamei, password: passwordi });
+  return "Registration successful";
+};
+
+//Extra2 not sure
+const sliceArray = function (array, control) {
+  let returnarray = [];
+  for (let i = 0; i <= array.length; i++) {
+    returnarray.push([array.splice(0, control)]);
+  }
+  return returnarray;
+};
